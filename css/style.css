@@ -1,0 +1,266 @@
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    text-decoration:none;
+    list-style: none;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Yantramanav', sans-serif;
+}
+/* --------------titulo-------------- */
+.header{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #DCD9D9;
+}
+
+.title{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #f85555;
+    padding-left: 10px;
+}
+
+/* -------------botones------------ */
+
+.container{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center
+    
+}
+
+.icono{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 33.3%;
+    border-left: 1px solid #DCD9D9;
+}
+
+.botton{
+    border: 0;
+    height: 50px;
+    width: 210px;
+    margin-top: 1px;
+    margin-right: 0.5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.botton:hover{
+    background-color:#f85555;
+}
+
+.img-botton{
+    height: 1px;
+    height: 40px;
+    width: 40px;
+}
+
+/* ------------------BARRA------------------ */
+.container-bar{
+    display: flex;
+    width: 100%;
+}
+
+.menu{
+    width: 20%;
+}
+
+.sub{
+    color: #4F4F4F;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+.listado{
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.input-wrapper{
+    position: relative;
+    width: 271px;
+}
+
+.bar{
+    display: flex;
+    justify-content: center;
+    color: #DCD9D9;
+    width: 500px;
+}
+
+.input-icon {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 470px;
+	top: 50%;
+	transform: translateY(-50%);
+    border-left: 2px solid #DCD9D9;
+}
+
+.input-icon:hover{
+    background-color: #f85555;
+}
+
+.celular{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #DCD9D9;
+    position: relative;
+}
+
+.p{
+    color: #DCD9D9;
+}
+
+.precio{
+    color: #4F4F4F;
+    font-weight: bold;
+}
+.borde{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    border-top: 1px solid #DCD9D9;
+}
+
+.carrito{
+    border: 0;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    margin-top: 1px;
+    margin-right: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #f85555;
+}
+
+.img-carrito{
+    height: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.width{
+    width: 200px;
+    height: 180px;
+    padding: 10px;
+}
+.corazon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.img-corazon{
+    width: 20px;
+}
+
+.corazon:hover{
+    background-color: #f85555;
+}
+
+.samsung{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 210px;
+    position: absolute;
+    top: 110px;
+    right: 110px;
+}
+
+.samsung-selet{
+    color: #4F4F4F;
+    font-weight: bold;
+}
+
+.h5{
+    color: #4F4F4F;
+    font-weight: bold;
+}
+
+.producto{
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    width: 190px;
+    right: 90px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.selet-precio1{
+    color: #4F4F4F;
+    font-weight: bold;
+}
+
+.de{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.hasta{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.checkbox{
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.imput-checkbox{
+    color: #4F4F4F;
+}
+.imput-che{
+    background-color: #f85555;
+}
