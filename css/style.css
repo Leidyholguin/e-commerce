@@ -66,6 +66,7 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: var(--z-conCart);
     
     
 }
@@ -273,24 +274,23 @@ body{
 .imput-che{
     background-color: #f85555;
 }
-
-.cartShopping{
-    z-index: var(--z-conCart);
-}
-
-.container_shopping{
-    width: 30vw;
+/* -------carrito-------- */
+.cart{
+    width: 30%;
     height: 100vh;
-    background-color: #fff;
-    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.15);
+    background-color: #4F4F4F;
+
     position: fixed;
     top: 0;
     right: 0;
-    z-index: var(--z-contentshopping);
-    border-bottom-left-radius: 2em;
-    border-top-left-radius: 2em;
-    margin-right: -100%;
+    z-index: 100;
 
-    
+    border-bottom-left-radius: 3em;
+    border-top-left-radius: 3em;
+
+   
 }
 
+.show cart{
+    margin-right: 0;
+}
