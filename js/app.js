@@ -57,7 +57,6 @@ const celulares = [
     },
 ];
 
-
 const shoppingCart = {};
 
 const containerProduct = document.getElementById("product-list");
@@ -76,7 +75,6 @@ containerProduct.addEventListener("click", (event) => {
             shoppingCart[currentProduct.id] = currentProduct;
             shoppingCart[currentProduct.id].cantidad = 1;
         }
-       
 
         const contentCart = document.querySelector(".content_cart");
 
@@ -115,10 +113,10 @@ function showProducts(celulares) {
                             <h3 class="precio">${celulares[i].ref}</h3>
                             <p class="p">presios:</p>
                             <h3 class="precio">${celulares[i].precio}</h3>
-                            <button id="${celulares[i].id}" class="btn btn-primary carrito">
-                            <img class=" img-carrito" src="./imagen/shopping-cart-3.svg" alt="carrito">
-                            </button>
-                           
+                            <button id="${celulares[i].id}" class="btn btn-primary">Añadir al carrito</button>
+                            <div class="carrito">
+                                <img class=" img-carrito" src="./imagen/shopping-cart-3.svg" alt="carrito">
+                            </div>
                             <div class="corazon">
                                 <img class="img-corazon" src="./imagen/heart-1.svg" alt="corazon">
                             </div>
