@@ -277,20 +277,22 @@ body{
 /* -------carrito-------- */
 .cart{
     width: 30%;
-    height: 100vh;
-    background-color: #4F4F4F;
-
-    position: fixed;
-    top: 0;
+    min-height: 70vh;
+    background-color: #fff;
+    position: absolute;
+    top: 20%;
     right: 0;
-    z-index: 100;
-
-    border-bottom-left-radius: 3em;
-    border-top-left-radius: 3em;
-
-   
+    z-index: 100;   
+    display: flex;
+    justify-content: center;
 }
 
-.show cart{
-    margin-right: 0;
+.hidden{
+    display: none;
+}
+.zoom {
+    transition: transform .9s; 
+}
+.zoom:hover {
+    transform: scale(1.05); 
 }

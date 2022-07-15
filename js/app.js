@@ -87,16 +87,15 @@ containerProduct.addEventListener("click", (event) => {
                     <img src="${ruta}" alt="" />
                     <h5>${ref}</h5>
                     <p>${precio}</p>
-                    <p>
+                    
                         <span class='rest'>-</span> 
                         <b>${cantidad}</b> 
-                        <span class='add'>+</span> 
-                        <span class='del'>DEL</span>
-                    </p>
+                        <button class="del"></button>
                 </div>
             `;
             }
         );
+
 
         contentCart.innerHTML = html;
     }
@@ -106,14 +105,14 @@ function showProducts(celulares) {
     let products = "";
 
     for (let i = 0; i < celulares.length; i++) {
-        products += `<div class="card">
+        products += `<div class="card zoom">
                         <img class="width" src="${celulares[i].ruta}" alt="">
                         <div class="borde">
                             <p class="p">${celulares[i].marca}</p>
                             <h3 class="precio">${celulares[i].ref}</h3>
                             <p class="p">presios:</p>
                             <h3 class="precio">${celulares[i].precio}</h3>
-                            <button id="${celulares[i].id}" class="btn btn-primary">Añadir al carrito</button>
+                            <button id="${celulares[i].id}" class="btn btn-primary">Añadir carro</button>
                             <div class="carrito">
                                 <img class=" img-carrito" src="./imagen/shopping-cart-3.svg" alt="carrito">
                             </div>
@@ -128,3 +127,13 @@ function showProducts(celulares) {
 }
 
 showProducts(celulares);
+
+function toggleMenu() {
+    const div = document.getElementById('cart');
+    div.classList.toggle('hidden');
+}
+
+showProducts(celulares);
+
+
+window.toggleMenu = toggleMenu;
