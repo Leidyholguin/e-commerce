@@ -61,6 +61,52 @@ const shoppingCart = {};
 
 const containerProduct = document.getElementById("product-list");
 
+const contentCart = document.querySelector(".content_cart");
+
+contentCart.addEventListener("click", (event) => {
+    console.log(shoppingCart);
+    if (event.target.classList.contains("add")) {
+      shoppingCart[event.target.id].cantidad++;
+    }
+    if (event.target.classList.contains("rest")) {
+        if(shoppingCart[event.target.id].cantidad > 1){
+            shoppingCart[event.target.id].cantidad--;
+        }
+      
+  }  
+  if (event.target.classList.contains("del")) {
+    const id = parseInt(event.target.id);
+
+    const res = confirm("seguro quieres eliminar esto?");
+
+    if (res) {
+        delete shoppingCart[id];
+    }
+} 
+  let html = "";
+
+  Object.values(shoppingCart).forEach(
+      ({ ruta, precio, ref, cantidad, id }) => {
+          html += `
+          <div>
+              <img src="${ruta}" alt="" />
+              <h5>${ref}</h5>
+              <p>${precio}</p>
+               <p>
+                  <button class='rest' id="${id}">-</button> 
+                  <b class ='cantidad'>${cantidad}</b> 
+                  <button class='add' id="${id}">+</button> 
+                  <button class='del' id="${id}">DEL</button>
+              </p>
+          </div>
+      `;
+      }
+  );
+
+
+  contentCart.innerHTML = html;
+  })
+
 containerProduct.addEventListener("click", (event) => {
     if (event.target.classList.contains("btn-primary")) {
         const id = parseInt(event.target.id);
@@ -76,21 +122,27 @@ containerProduct.addEventListener("click", (event) => {
             shoppingCart[currentProduct.id].cantidad = 1;
         }
 
-        const contentCart = document.querySelector(".content_cart");
+        
 
         let html = "";
 
+
+
+
+
         Object.values(shoppingCart).forEach(
-            ({ ruta, precio, ref, cantidad }) => {
+            ({ ruta, precio, ref, cantidad, id }) => {
                 html += `
                 <div>
                     <img src="${ruta}" alt="" />
                     <h5>${ref}</h5>
                     <p>${precio}</p>
-                    
-                        <span class='rest'>-</span> 
+                     <p>
+                        <button class='rest' id="${id}">-</button> 
                         <b>${cantidad}</b> 
-                        <button class="del"></button>
+                        <button class='add' id="${id}">+</button> 
+                        <span class='del'>DEL</span>
+                    </p>
                 </div>
             `;
             }

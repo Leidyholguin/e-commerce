@@ -280,7 +280,7 @@ body{
     min-height: 70vh;
     background-color: #fff;
     position: absolute;
-    top: 20%;
+    top: 10%;
     right: 0;
     z-index: 100;   
     display: flex;
@@ -295,4 +295,34 @@ body{
 }
 .zoom:hover {
     transform: scale(1.05); 
+}
+
+.shopping__header {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.rest,
+.add,
+.del {
+    cursor: pointer;
+    border-radius: 1em;
+    height: 2.5em;
+    width: 2.5em;
+    background-color: #fff;
+    border: 0;
+    gap: 1em;
+
+}
+
+.rest,
+.add,
+.del:hover{
+    background-color: #f85555;
+}
+ 
+
+.cantidad{
+    z-index: 5em;
 }
